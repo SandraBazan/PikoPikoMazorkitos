@@ -23,6 +23,9 @@ public class Jugador {
     private Dado dado6;
     private Dado dado7;
     private Dado dado8;
+   
+    private boolean turno;
+    
     ArrayList<Ficha> ficha; //Fichas acumuladas
     
     private int racionMazorkos; //Cantidad de Mazorkos seleccionados
@@ -33,7 +36,7 @@ public class Jugador {
     }
     
     //Método constructor parametrizado
-    public Jugador(String nombreJugador, Dado dado1, Dado dado2, Dado dado3, Dado dado4, Dado dado5, Dado dado6, Dado dado7, Dado dado8, ArrayList<Ficha> ficha, int racionMazorkos, int valorAcumulado) {
+    public Jugador(String nombreJugador, Dado dado1, Dado dado2, Dado dado3, Dado dado4, Dado dado5, Dado dado6, Dado dado7, Dado dado8, boolean turno, ArrayList<Ficha> ficha, int racionMazorkos, int valorAcumulado) {
         this.nombreJugador = nombreJugador;
         this.dado1 = dado1;
         this.dado2 = dado2;
@@ -43,10 +46,13 @@ public class Jugador {
         this.dado6 = dado6;
         this.dado7 = dado7;
         this.dado8 = dado8;
+        this.turno = turno;
         this.ficha = ficha;
+
         this.racionMazorkos = racionMazorkos;
         this.valorAcumulado = valorAcumulado;
     }
+    
     
     //Métodos getters y setters
     public String getNombreJugador() {
