@@ -31,7 +31,7 @@ public enum CaraDado {
         this.puntuacion = puntuacion;
         this.imagen = imagen;
     }
-    
+
     //Métodos getters y setters
     public int getNumero() {
         return numero;
@@ -56,10 +56,11 @@ public enum CaraDado {
     public void setImagen(ImageIcon imagen) {
         this.imagen = imagen;
     }
-    
+
     //Método toString
     @Override
     public String toString() {
         return "CaraDado{" + "numero=" + numero + ", puntuacion=" + puntuacion + ", imagen=" + imagen + '}';
-    }  
+    }
+    
 }
