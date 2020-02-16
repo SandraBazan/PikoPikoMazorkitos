@@ -7,6 +7,7 @@ package pikopikomazorkito;
 
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -78,8 +79,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         // TODO Añadir el método que permita seleccionar el número de jugadores
+
+        //Aquí esta el JOption con los jugadores que se crean
+        Integer[] jugadores = {2, 3, 4};
+
+        Object opcion = JOptionPane.showInputDialog(null, "¿Cuantos jugadores van a jugar?", "Elegir", JOptionPane.QUESTION_MESSAGE, null, jugadores, jugadores[0]);
+
+        int gamers = (int) opcion;
+
+        Jugador[] jugones = new Jugador[gamers];
+
+        for (int i = 0; i < jugones.length; i++) {
+            String texto = JOptionPane.showInputDialog("Digame el nombre del jugador " + (i + 1));
+            jugones[i] = new Jugador(texto);
+        }
+
+        //Imprimo los jugadores por si sale algún fallo pero los crea perfectamente
+        for (Jugador aux : jugones) {
+            System.out.println(aux);
+        }
+
         new VentanaJuego().setVisible(true);
-        
+
+
     }//GEN-LAST:event_startButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
