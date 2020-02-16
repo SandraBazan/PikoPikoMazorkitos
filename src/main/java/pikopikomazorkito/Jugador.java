@@ -53,6 +53,11 @@ public class Jugador {
         this.valorAcumulado = valorAcumulado;
     }
     
+    //Constructor para el JOption
+    public Jugador(String nombreJugador){
+        this.nombreJugador = nombreJugador;
+    }
+    
     
     //Métodos getters y setters
     public String getNombreJugador() {
