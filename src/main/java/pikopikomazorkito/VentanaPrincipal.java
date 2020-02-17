@@ -23,7 +23,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         this.setResizable(false);//Que la ventana no se redimensione
-        this.setBounds(500, 250, 1000, 700);
+        this.setBounds(150, 25, 1000, 700);
         this.setTitle("Picko Picko Mazorkitos");
         this.setBackground(Color.WHITE);
         this.img = new ImageIcon("res/bg.jpg");
