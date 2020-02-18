@@ -48,6 +48,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
+        
         }
 
     /**
