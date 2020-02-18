@@ -195,11 +195,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 1"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado1MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 2"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado2MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado3">
           <Properties>

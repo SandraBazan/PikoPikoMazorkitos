@@ -16,6 +16,8 @@ public class VentanaJuego extends javax.swing.JFrame {
     /**
      * Creates new form VentanaJuego
      */
+    private boolean dado1Seleccionado = false;
+    private boolean dado2Seleccionado = false;
     public VentanaJuego() {
         initComponents();
         this.setResizable(false);
@@ -48,9 +50,12 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
-        
-        }
 
+        }
+    //Creamos un método auxiliar que permite cambiar el icono del dado seleccionado:
+    private void setValueOnDado(javax.swing.JLabel origen, javax.swing.JLabel destino){
+        destino.setIcon(origen.getIcon());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -174,8 +179,18 @@ public class VentanaJuego extends javax.swing.JFrame {
         jPanel1.setBounds(10, 130, 710, 86);
 
         dado1.setText("Dado 1");
+        dado1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado1MouseClicked(evt);
+            }
+        });
 
         dado2.setText("Dado 2");
+        dado2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado2MouseClicked(evt);
+            }
+        });
 
         dado3.setText("Dado 3");
 
@@ -378,7 +393,36 @@ public class VentanaJuego extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void dado1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado1MouseClicked
+        // TODO add your handling code here:
+        if(!dado1Seleccionado){
+            this.dado1.setIcon(new ImageIcon("res/dado/unoDeshabilitado.png"));
+            dado1Seleccionado = !dado1Seleccionado;
+        }
+        else{
+            this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
+            dado1Seleccionado = !dado1Seleccionado;
+        }
+        
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado1MouseClicked
+
+    private void dado2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado2MouseClicked
+
+        // TODO add your handling code here:
+        if(!dado2Seleccionado){
+            this.dado2.setIcon(new ImageIcon("res/dado/dosDeshabilitado.png"));
+            dado2Seleccionado = !dado2Seleccionado;
+        }
+        else{
+            this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
+            dado2Seleccionado = !dado2Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
