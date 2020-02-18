@@ -22,37 +22,9 @@ public class Dado {
     // Se va a utilizar para saber si los dados no han sido deshabilitado.
     private boolean disponible = true;
 
-    public CaraDado lanzarDado() {
+    public void lanzarDado() {
         Random aleatorio = new Random();
-        this.caraSeleccionada = aleatorio.nextInt(5);
-        switch(caraSeleccionada){
-            // Si el caraSeleccionada es 0
-            case 0:
-                // Devuelve la primera cara del dado
-                return CaraDado.CARA1;
-            // Si el caraSeleccionada es 0    
-            case 1:
-                // Devuelve la segunda cara del dado
-                return CaraDado.CARA2;
-            // Si el caraSeleccionada es 0   
-            case 2:
-                // Devuelve la tercera cara del dado
-                return CaraDado.CARA3;
-            // Si el caraSeleccionada es 0
-            case 3:
-                // Devuelve la cuarta cara del dado
-                return CaraDado.CARA4;
-            // Si el caraSeleccionada es 0
-            case 4:
-                // Devuelve la quinta cara del dado
-                return CaraDado.CARA5;
-            // Si el caraSeleccionada es 0
-            case 5:
-                // Devuelve la cara de la mazorca del dado
-                return CaraDado.CARA6;
-        }
-        // Por defecto devuelve la primera cara del dado
-        return CaraDado.CARA1;     
+        this.caraSeleccionada = aleatorio.nextInt(6);           
     }
 
     public CaraDado[] getArrayCaras() {
