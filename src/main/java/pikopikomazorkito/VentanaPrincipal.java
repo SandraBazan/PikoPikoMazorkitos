@@ -22,15 +22,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public VentanaPrincipal() {
         initComponents();
-        this.setResizable(false);//Que la ventana no se redimensione
-        this.setBounds(150, 25, 1000, 700);
-        this.setTitle("Picko Picko Mazorkitos");
+        this.setResizable(false); //Que la ventana no se redimensione
+        this.setBounds(400, 150, 1200, 800);
+        this.setTitle("Picko Picko Mazorkito");
         this.setBackground(Color.WHITE);
         this.img = new ImageIcon("res/bg.jpg");
         this.etiquetaImagen.setIcon(this.img);
         this.etiquetaImagen.setText("");
-        this.etiquetaImagen.setSize(1250, 700);
-
+        this.etiquetaImagen.setSize(1200, 800);
     }
 
     /**
@@ -42,8 +41,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        startButton = new javax.swing.JButton();
-        exitButton = new javax.swing.JButton();
+        botonJugar = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
         etiquetaImagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,23 +51,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        startButton.setText("Iniciar");
-        startButton.addActionListener(new java.awt.event.ActionListener() {
+        botonJugar.setBackground(new java.awt.Color(255, 255, 255));
+        botonJugar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Jugar.png")); // NOI18N
+        botonJugar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startButtonActionPerformed(evt);
+                botonJugarActionPerformed(evt);
             }
         });
-        getContentPane().add(startButton);
-        startButton.setBounds(100, 550, 69, 32);
+        getContentPane().add(botonJugar);
+        botonJugar.setBounds(870, 270, 210, 50);
 
-        exitButton.setText("Salir");
-        exitButton.addActionListener(new java.awt.event.ActionListener() {
+        botonSalir.setBackground(new java.awt.Color(255, 255, 255));
+        botonSalir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Salir.png")); // NOI18N
+        botonSalir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitButtonActionPerformed(evt);
+                botonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(exitButton);
-        exitButton.setBounds(840, 550, 57, 32);
+        getContentPane().add(botonSalir);
+        botonSalir.setBounds(870, 420, 210, 50);
 
         etiquetaImagen.setText("Bienvenido a Piko Piko Mazorquito");
         getContentPane().add(etiquetaImagen);
@@ -77,7 +80,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
+    private void botonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonJugarActionPerformed
         // TODO Añadir el método que permita seleccionar el número de jugadores
 
         //Aquí esta el JOption con los jugadores que se crean
@@ -113,12 +116,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
 
 
-    }//GEN-LAST:event_startButtonActionPerformed
+    }//GEN-LAST:event_botonJugarActionPerformed
 
-    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
         // TODO add your handling code here:
         System.exit(0);//Cierra la aplicación
-    }//GEN-LAST:event_exitButtonActionPerformed
+    }//GEN-LAST:event_botonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,9 +159,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonJugar;
+    private javax.swing.JButton botonSalir;
     private javax.swing.JLabel etiquetaImagen;
-    private javax.swing.JButton exitButton;
-    private javax.swing.JButton startButton;
     // End of variables declaration//GEN-END:variables
 
 }
