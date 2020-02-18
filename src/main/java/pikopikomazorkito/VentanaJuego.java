@@ -18,7 +18,7 @@ public class VentanaJuego extends javax.swing.JFrame {
      */
     private boolean dado1Seleccionado = false;
     private boolean dado2Seleccionado = false;
-    public VentanaJuego() {
+    public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, Jugador jugador4) {
         initComponents();
         this.setResizable(false);
         this.setTitle("Picko Picko Mazorkitos");
@@ -51,7 +51,98 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
 
-        }
+        this.gamePlayer1.setText(jugador1.getNombreJugador());
+        this.gamePlayer2.setText(jugador2.getNombreJugador());
+        this.gamePlayer3.setText(jugador3.getNombreJugador());
+        this.gamePlayer4.setText(jugador4.getNombreJugador());
+        
+
+
+    }
+    public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3) {
+        initComponents();
+        this.setResizable(false);
+        this.setTitle("Picko Picko Mazorkitos");
+        this.jLabel11.setIcon(new ImageIcon("res/bgGame.jpg"));
+        this.logo.setIcon(new ImageIcon("res/logo.png"));
+        this.jLabel11.setSize(1250, 700);
+        this.jLabel11.setLocation(-110, 0);
+        this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
+        this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
+        this.dado3.setIcon(new ImageIcon("res/dado/tres.png"));
+        this.dado4.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        this.dado5.setIcon(new ImageIcon("res/dado/cinco.png"));
+        this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
+        this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
+        this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha4.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha5.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha6.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha7.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha8.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha9.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha10.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha11.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha12.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha13.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
+
+
+
+        this.gamePlayer1.setText(jugador1.getNombreJugador());
+        this.gamePlayer2.setText(jugador2.getNombreJugador());
+        this.gamePlayer3.setText(jugador3.getNombreJugador());
+        this.gamePlayer4.setText("Vacío");
+        
+
+
+    }
+     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2) {
+        initComponents();
+        this.setResizable(false);
+        this.setTitle("Picko Picko Mazorkitos");
+        this.jLabel11.setIcon(new ImageIcon("res/bgGame.jpg"));
+        this.logo.setIcon(new ImageIcon("res/logo.png"));
+        this.jLabel11.setSize(1250, 700);
+        this.jLabel11.setLocation(-110, 0);
+        this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
+        this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
+        this.dado3.setIcon(new ImageIcon("res/dado/tres.png"));
+        this.dado4.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        this.dado5.setIcon(new ImageIcon("res/dado/cinco.png"));
+        this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
+        this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
+        this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha4.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha5.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha6.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha7.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha8.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha9.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha10.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha11.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha12.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha13.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
+
+
+
+        this.gamePlayer1.setText(jugador1.getNombreJugador());
+        this.gamePlayer2.setText(jugador2.getNombreJugador());
+        this.gamePlayer3.setText("Vacío");
+        this.gamePlayer4.setText("Vacío");
+        
+
+
+    }
     //Creamos un método auxiliar que permite cambiar el icono del dado seleccionado:
     private void setValueOnDado(javax.swing.JLabel origen, javax.swing.JLabel destino){
         destino.setIcon(origen.getIcon());

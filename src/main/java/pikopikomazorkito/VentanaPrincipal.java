@@ -99,7 +99,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             System.out.println(aux);
         }
 
-        new VentanaJuego().setVisible(true);
+        switch(gamers){
+            case 2:
+                new VentanaJuego(2, jugones[0], jugones[1]).setVisible(true);
+                break;
+            case 3:
+                new VentanaJuego(3, jugones[0], jugones[1], jugones[2]).setVisible(true);
+                break;
+            case 4:
+                new VentanaJuego(4, jugones[0], jugones[1], jugones[2], jugones[3]).setVisible(true);
+                break;
+        }
+        
 
 
     }//GEN-LAST:event_startButtonActionPerformed
