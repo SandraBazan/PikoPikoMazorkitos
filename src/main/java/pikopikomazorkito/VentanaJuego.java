@@ -18,6 +18,7 @@ public class VentanaJuego extends javax.swing.JFrame {
      */
     private boolean dado1Seleccionado = false;
     private boolean dado2Seleccionado = false;
+    private boolean dado3Seleccionado = false;
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, Jugador jugador4) {
         initComponents();
         this.setResizable(false);
@@ -284,6 +285,11 @@ public class VentanaJuego extends javax.swing.JFrame {
         });
 
         dado3.setText("Dado 3");
+        dado3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado3MouseClicked(evt);
+            }
+        });
 
         dado4.setText("Dado 4");
 
@@ -360,7 +366,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(210, 490, 143, 110);
+        jPanel5.setBounds(210, 490, 150, 110);
 
         jPanel4.setBackground(new java.awt.Color(130, 180, 180));
         jPanel4.setToolTipText("");
@@ -385,7 +391,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(20, 490, 155, 110);
+        jPanel4.setBounds(20, 490, 162, 110);
 
         jPanel6.setBackground(new java.awt.Color(95, 127, 122));
 
@@ -409,7 +415,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel6);
-        jPanel6.setBounds(390, 490, 143, 110);
+        jPanel6.setBounds(390, 490, 150, 110);
 
         jPanel7.setBackground(new java.awt.Color(252, 247, 94));
 
@@ -433,7 +439,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(560, 490, 143, 110);
+        jPanel7.setBounds(560, 490, 150, 110);
 
         logo.setText("jLabel1");
         getContentPane().add(logo);
@@ -446,15 +452,15 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(400, 430, 66, 32);
+        jButton3.setBounds(400, 430, 72, 31);
 
         jButton4.setText("Seleccionar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(130, 430, 101, 32);
+        jButton4.setBounds(130, 430, 112, 31);
 
         jButton2.setText("Plantarse");
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 430, 87, 32);
+        jButton2.setBounds(520, 430, 99, 31);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -473,11 +479,11 @@ public class VentanaJuego extends javax.swing.JFrame {
 
         jButton1.setText("Lanzar");
         getContentPane().add(jButton1);
-        jButton1.setBounds(280, 430, 71, 32);
+        jButton1.setBounds(280, 430, 79, 31);
 
         jLabel11.setText("Juego del piko piko");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 0, 122, 16);
+        jLabel11.setBounds(0, 0, 134, 15);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -504,16 +510,30 @@ public class VentanaJuego extends javax.swing.JFrame {
     private void dado2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado2MouseClicked
 
         // TODO add your handling code here:
+        
         if(!dado2Seleccionado){
-            this.dado1.setEnabled(false);
+            this.dado2.setEnabled(false);
             dado2Seleccionado = !dado2Seleccionado;
         }
         else{
-            this.dado1.setEnabled(true);
+            this.dado2.setEnabled(true);
             dado2Seleccionado = !dado2Seleccionado;
         }
         System.out.println("Dado cambiado");
     }//GEN-LAST:event_dado2MouseClicked
+
+    private void dado3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado3MouseClicked
+        // TODO add your handling code here:
+         if(!dado3Seleccionado){
+            this.dado3.setEnabled(false);
+            dado3Seleccionado = !dado3Seleccionado;
+        }
+        else{
+            this.dado3.setEnabled(true);
+            dado3Seleccionado = !dado3Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado3MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
