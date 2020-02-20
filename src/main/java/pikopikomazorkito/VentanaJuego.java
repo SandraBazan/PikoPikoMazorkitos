@@ -490,11 +490,11 @@ public class VentanaJuego extends javax.swing.JFrame {
     private void dado1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado1MouseClicked
         // TODO add your handling code here:
         if(!dado1Seleccionado){
-            this.dado1.setIcon(new ImageIcon("res/dado/unoDeshabilitado.png"));
+            this.dado1.setEnabled(false);
             dado1Seleccionado = !dado1Seleccionado;
         }
         else{
-            this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
+            this.dado1.setEnabled(true);
             dado1Seleccionado = !dado1Seleccionado;
         }
         
@@ -505,11 +505,11 @@ public class VentanaJuego extends javax.swing.JFrame {
 
         // TODO add your handling code here:
         if(!dado2Seleccionado){
-            this.dado2.setIcon(new ImageIcon("res/dado/dosDeshabilitado.png"));
+            this.dado1.setEnabled(false);
             dado2Seleccionado = !dado2Seleccionado;
         }
         else{
-            this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
+            this.dado1.setEnabled(true);
             dado2Seleccionado = !dado2Seleccionado;
         }
         System.out.println("Dado cambiado");
