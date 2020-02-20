@@ -13,12 +13,12 @@ import javax.swing.ImageIcon;
  */
 public enum CaraDado {
 
-    CARA1(1, 1, new ImageIcon("res/mazorko.jpeg")), //Url de la imagen del dado
-    CARA2(2, 2, new ImageIcon("res/mazorko.jpeg")),
-    CARA3(3, 3, new ImageIcon("res/mazorko.jpeg")),
-    CARA4(4, 4, new ImageIcon("res/mazorko.jpeg")),
-    CARA5(5, 5, new ImageIcon("res/mazorko.jpeg")),
-    CARA6(6, 5, new ImageIcon("res/mazorko.jpeg"));
+    CARA1(1, 1, new ImageIcon("res/dado/uno.png")), //Url de la imagen del dado
+    CARA2(2, 2, new ImageIcon("res/dado/dos.png")),
+    CARA3(3, 3, new ImageIcon("res/dado/tres.png")),
+    CARA4(4, 4, new ImageIcon("res/dado/cuatro.png")),
+    CARA5(5, 5, new ImageIcon("res/dado/cinco.png")),
+    CARA6(6, 5, new ImageIcon("res/dado/mazorca.png"));
 
     //Atributos
     private int numero;
