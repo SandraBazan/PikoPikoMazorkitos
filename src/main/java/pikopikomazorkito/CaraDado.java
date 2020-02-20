@@ -37,26 +37,14 @@ public enum CaraDado {
         return numero;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
     public int getPuntuacion() {
         return puntuacion;
-    }
-
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
     }
 
     public ImageIcon getImagen() {
         return imagen;
     }
-
-    public void setImagen(ImageIcon imagen) {
-        this.imagen = imagen;
-    }
-
+    
     //Método toString
     @Override
     public String toString() {
