@@ -19,6 +19,12 @@ public class VentanaJuego extends javax.swing.JFrame {
     private boolean dado1Seleccionado = false;
     private boolean dado2Seleccionado = false;
     private boolean dado3Seleccionado = false;
+    private boolean dado4Seleccionado = false;
+    private boolean dado5Seleccionado = false;
+    private boolean dado6Seleccionado = false;
+    private boolean dado7Seleccionado = false;
+    private boolean dado8Seleccionado = false;
+
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, Jugador jugador4) {
         initComponents();
         this.setResizable(false);
@@ -51,15 +57,13 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
-
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
         this.gamePlayer3.setText(jugador3.getNombreJugador());
         this.gamePlayer4.setText(jugador4.getNombreJugador());
-        
-
 
     }
+
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3) {
         initComponents();
         this.setResizable(false);
@@ -92,17 +96,14 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
-
-
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
         this.gamePlayer3.setText(jugador3.getNombreJugador());
         this.gamePlayer4.setText("Vacío");
-        
-
 
     }
-     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2) {
+
+    public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2) {
         initComponents();
         this.setResizable(false);
         this.setTitle("Picko Picko Mazorkitos");
@@ -134,20 +135,18 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
         this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
 
-
-
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
         this.gamePlayer3.setText("Vacío");
         this.gamePlayer4.setText("Vacío");
-        
-
 
     }
+
     //Creamos un método auxiliar que permite cambiar el icono del dado seleccionado:
-    private void setValueOnDado(javax.swing.JLabel origen, javax.swing.JLabel destino){
+    private void setValueOnDado(javax.swing.JLabel origen, javax.swing.JLabel destino) {
         destino.setIcon(origen.getIcon());
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -292,14 +291,39 @@ public class VentanaJuego extends javax.swing.JFrame {
         });
 
         dado4.setText("Dado 4");
+        dado4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado4MouseClicked(evt);
+            }
+        });
 
         dado5.setText("Dado 5");
+        dado5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado5MouseClicked(evt);
+            }
+        });
 
         dado6.setText("Dado 6");
+        dado6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado6MouseClicked(evt);
+            }
+        });
 
         dado7.setText("Dado 7");
+        dado7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado7MouseClicked(evt);
+            }
+        });
 
         dado8.setText("Dado 8");
+        dado8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dado8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -490,32 +514,29 @@ public class VentanaJuego extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void dado1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado1MouseClicked
         // TODO add your handling code here:
-        if(!dado1Seleccionado){
+        if (!dado1Seleccionado) {
             this.dado1.setEnabled(false);
             dado1Seleccionado = !dado1Seleccionado;
-        }
-        else{
+        } else {
             this.dado1.setEnabled(true);
             dado1Seleccionado = !dado1Seleccionado;
         }
-        
+
         System.out.println("Dado cambiado");
     }//GEN-LAST:event_dado1MouseClicked
 
     private void dado2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado2MouseClicked
 
         // TODO add your handling code here:
-        
-        if(!dado2Seleccionado){
+        if (!dado2Seleccionado) {
             this.dado2.setEnabled(false);
             dado2Seleccionado = !dado2Seleccionado;
-        }
-        else{
+        } else {
             this.dado2.setEnabled(true);
             dado2Seleccionado = !dado2Seleccionado;
         }
@@ -524,16 +545,78 @@ public class VentanaJuego extends javax.swing.JFrame {
 
     private void dado3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado3MouseClicked
         // TODO add your handling code here:
-         if(!dado3Seleccionado){
+        if (!dado3Seleccionado) {
             this.dado3.setEnabled(false);
             dado3Seleccionado = !dado3Seleccionado;
-        }
-        else{
+        } else {
             this.dado3.setEnabled(true);
             dado3Seleccionado = !dado3Seleccionado;
         }
         System.out.println("Dado cambiado");
     }//GEN-LAST:event_dado3MouseClicked
+
+    private void dado4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado4MouseClicked
+        // TODO add your handling code here:
+        if (!dado4Seleccionado) {
+            this.dado4.setEnabled(false);
+            dado4Seleccionado = !dado4Seleccionado;
+        } else {
+            this.dado4.setEnabled(true);
+            dado4Seleccionado = !dado4Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado4MouseClicked
+
+    private void dado5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado5MouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        if (!dado5Seleccionado) {
+            this.dado5.setEnabled(false);
+            dado5Seleccionado = !dado5Seleccionado;
+        } else {
+            this.dado5.setEnabled(true);
+            dado5Seleccionado = !dado5Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado5MouseClicked
+
+    private void dado6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado6MouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        if (!dado6Seleccionado) {
+            this.dado6.setEnabled(false);
+            dado6Seleccionado = !dado6Seleccionado;
+        } else {
+            this.dado6.setEnabled(true);
+            dado6Seleccionado = !dado6Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado6MouseClicked
+
+    private void dado7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado7MouseClicked
+        // TODO add your handling code here:
+        if (!dado7Seleccionado) {
+            this.dado7.setEnabled(false);
+            dado7Seleccionado = !dado7Seleccionado;
+        } else {
+            this.dado7.setEnabled(true);
+            dado7Seleccionado = !dado7Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+
+    }//GEN-LAST:event_dado7MouseClicked
+
+    private void dado8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dado8MouseClicked
+        // TODO add your handling code here:
+        if (!dado8Seleccionado) {
+            this.dado8.setEnabled(false);
+            dado8Seleccionado = !dado8Seleccionado;
+        } else {
+            this.dado8.setEnabled(true);
+            dado8Seleccionado = !dado8Seleccionado;
+        }
+        System.out.println("Dado cambiado");
+    }//GEN-LAST:event_dado8MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

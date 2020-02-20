@@ -219,26 +219,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 4"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado4MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 5"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado5MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 6"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado6MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 7"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado7MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dado8">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dado 8"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dado8MouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
