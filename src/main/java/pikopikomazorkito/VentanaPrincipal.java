@@ -23,13 +23,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         this.setResizable(false); //Que la ventana no se redimensione
-        this.setBounds(400, 150, 1200, 800);
+        this.setBounds(200, 150, 901, 600);
         this.setTitle("Picko Picko Mazorkito");
-        this.setBackground(Color.WHITE);
         this.img = new ImageIcon("res/bg.jpg");
         this.etiquetaImagen.setIcon(this.img);
         this.etiquetaImagen.setText("");
-        this.etiquetaImagen.setSize(1200, 800);
+        this.etiquetaImagen.setSize(901, 600);
     }
 
     /**
@@ -53,29 +52,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         botonJugar.setBackground(new java.awt.Color(255, 255, 255));
         botonJugar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Jugar.png")); // NOI18N
-        botonJugar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonJugar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        botonJugar.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\JugarR.png")); // NOI18N
         botonJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonJugarActionPerformed(evt);
             }
         });
         getContentPane().add(botonJugar);
-        botonJugar.setBounds(870, 270, 210, 50);
+        botonJugar.setBounds(670, 150, 160, 50);
 
         botonSalir.setBackground(new java.awt.Color(255, 255, 255));
         botonSalir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Salir.png")); // NOI18N
-        botonSalir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonSalir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        botonSalir.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\SalirR.png")); // NOI18N
         botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonSalirActionPerformed(evt);
             }
         });
         getContentPane().add(botonSalir);
-        botonSalir.setBounds(870, 420, 210, 50);
+        botonSalir.setBounds(670, 280, 160, 50);
 
         etiquetaImagen.setText("Bienvenido a Piko Piko Mazorquito");
         getContentPane().add(etiquetaImagen);
-        etiquetaImagen.setBounds(0, 0, 520, 470);
+        etiquetaImagen.setBounds(0, 0, 980, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -93,7 +94,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Jugador[] jugones = new Jugador[gamers];
 
         for (int i = 0; i < jugones.length; i++) {
-            String texto = JOptionPane.showInputDialog("Digame el nombre del jugador " + (i + 1));
+            String texto = JOptionPane.showInputDialog("Introduce el nombre del jugador " + (i + 1));
             jugones[i] = new Jugador(texto);
         }
 
@@ -101,7 +102,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         for (Jugador aux : jugones) {
             System.out.println(aux);
         }
-
+        
         switch(gamers){
             case 2:
                 new VentanaJuego(2, jugones[0], jugones[1]).setVisible(true);
@@ -157,7 +158,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonJugar;
     private javax.swing.JButton botonSalir;
