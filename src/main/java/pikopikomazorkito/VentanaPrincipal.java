@@ -6,6 +6,7 @@
 package pikopikomazorkito;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -90,33 +91,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Object opcion = JOptionPane.showInputDialog(null, "¿Cuantos jugadores van a jugar?", "Elegir", JOptionPane.QUESTION_MESSAGE, null, jugadores, jugadores[0]);
 
         int gamers = (int) opcion;
+        
+        //Creación del Arraylist
+        ArrayList<Jugador> jugones2 = new ArrayList();
+        
+        //Dado el número de jugadores que vamos a tener
+        //Procedemos a preguntar sus nombre
+        for (int i = 0; i < gamers; i++) {
+            String texto;
+            
+            //Bucle do para tener si ó si un nombre
+            do {
+                texto = JOptionPane.showInputDialog("Introduce el nombre del jugador " + (i + 1));
 
-        Jugador[] jugones = new Jugador[gamers];
+            } while (texto.isEmpty());
 
-        for (int i = 0; i < jugones.length; i++) {
-            String texto = JOptionPane.showInputDialog("Introduce el nombre del jugador " + (i + 1));
-            jugones[i] = new Jugador(texto);
-        }
-
-        //Imprimo los jugadores por si sale algún fallo pero los crea perfectamente
-        for (Jugador aux : jugones) {
-            System.out.println(aux);
+            jugones2.add(new Jugador(texto));
         }
         
-        switch(gamers){
+        //Imprimo por consola todos los jugadores que ha introducido su nombre
+        jugones2.forEach(System.out::println);
+
+        switch (gamers) {
             case 2:
-                new VentanaJuego(2, jugones[0], jugones[1]).setVisible(true);
+                new VentanaJuego(2, jugones2.get(0), jugones2.get(1)).setVisible(true);
                 break;
             case 3:
-                new VentanaJuego(3, jugones[0], jugones[1], jugones[2]).setVisible(true);
+                new VentanaJuego(3, jugones2.get(0), jugones2.get(1), jugones2.get(2)).setVisible(true);
                 break;
             case 4:
-                new VentanaJuego(4, jugones[0], jugones[1], jugones[2], jugones[3]).setVisible(true);
+                new VentanaJuego(4, jugones2.get(0), jugones2.get(1), jugones2.get(2), jugones2.get(3)).setVisible(true);
                 break;
         }
-        
-
-
     }//GEN-LAST:event_botonJugarActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
@@ -158,7 +164,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonJugar;
     private javax.swing.JButton botonSalir;

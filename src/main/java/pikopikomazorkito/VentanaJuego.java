@@ -390,7 +390,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(210, 490, 150, 110);
+        jPanel5.setBounds(210, 490, 141, 110);
 
         jPanel4.setBackground(new java.awt.Color(130, 180, 180));
         jPanel4.setToolTipText("");
@@ -415,7 +415,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(20, 490, 162, 110);
+        jPanel4.setBounds(20, 490, 153, 110);
 
         jPanel6.setBackground(new java.awt.Color(95, 127, 122));
 
@@ -439,7 +439,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel6);
-        jPanel6.setBounds(390, 490, 150, 110);
+        jPanel6.setBounds(390, 490, 141, 110);
 
         jPanel7.setBackground(new java.awt.Color(252, 247, 94));
 
@@ -463,7 +463,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(560, 490, 150, 110);
+        jPanel7.setBounds(560, 490, 141, 110);
 
         logo.setText("jLabel1");
         getContentPane().add(logo);
@@ -476,15 +476,15 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(400, 430, 72, 31);
+        jButton3.setBounds(400, 430, 64, 32);
 
         jButton4.setText("Seleccionar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(130, 430, 112, 31);
+        jButton4.setBounds(130, 430, 98, 32);
 
         jButton2.setText("Plantarse");
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 430, 99, 31);
+        jButton2.setBounds(520, 430, 85, 32);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -503,11 +503,11 @@ public class VentanaJuego extends javax.swing.JFrame {
 
         jButton1.setText("Lanzar");
         getContentPane().add(jButton1);
-        jButton1.setBounds(280, 430, 79, 31);
+        jButton1.setBounds(280, 430, 69, 32);
 
         jLabel11.setText("Juego del piko piko");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 0, 134, 15);
+        jLabel11.setBounds(0, 0, 109, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
