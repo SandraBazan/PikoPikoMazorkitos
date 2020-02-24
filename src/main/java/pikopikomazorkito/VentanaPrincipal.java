@@ -111,7 +111,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         //Imprimo por consola todos los jugadores que ha introducido su nombre
         jugones2.forEach(System.out::println);
-
+        
+        
+        //Según el número de jugadores crea una nueva ventana para ver los jugadores en su orden de llegada
         switch (gamers) {
             case 2:
                 new VentanaJuego(2, jugones2.get(0), jugones2.get(1)).setVisible(true);
