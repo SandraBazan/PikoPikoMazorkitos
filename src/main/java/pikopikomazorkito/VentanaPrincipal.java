@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import java.io.File;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+
 /**
  *
  * @author carlos-pc
@@ -30,8 +35,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.etiquetaImagen.setIcon(this.img);
         this.etiquetaImagen.setText("");
         this.etiquetaImagen.setSize(901, 600);
-    }
+        
+    try {
 
+            new JFXPanel();
+            String pon = new File("res/sonidos/musicaprincipal.mp3").toURI().toString();
+            new MediaPlayer(new Media(pon)).play();
+        } catch (Exception e) {
+            System.out.println("No se puede iniciar");
+        }   
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
