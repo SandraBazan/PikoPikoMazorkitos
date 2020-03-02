@@ -24,12 +24,11 @@ public class VentanaJuego extends javax.swing.JFrame {
     private boolean dado6Seleccionado = false;
     private boolean dado7Seleccionado = false;
     private boolean dado8Seleccionado = false;
-    
+
     //Atributos de las fichas
     private Racion ficha;
-    
-    //Llamar en cada constructor a la ficha con la clase Enum de Racion.
 
+    //Llamar en cada constructor a la ficha con la clase Enum de Racion.
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, Jugador jugador4) {
         initComponents();
         this.setResizable(false);
@@ -46,22 +45,21 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
         this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
         this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        this.ficha = Racion.RACION21;
-        this.ficha = Racion.RACION22;
-        this.ficha = Racion.RACION23;
-        this.ficha = Racion.RACION24;
-        this.ficha = Racion.RACION25;
-        this.ficha = Racion.RACION26;
-        this.ficha = Racion.RACION27;
-        this.ficha = Racion.RACION28;
-        this.ficha = Racion.RACION29;
-        this.ficha = Racion.RACION30;
-        this.ficha = Racion.RACION31;
-        this.ficha = Racion.RACION32;
-        this.ficha = Racion.RACION33;
-        this.ficha = Racion.RACION34;
-        this.ficha = Racion.RACION35;
-        this.ficha = Racion.RACION36; 
+        this.ficha1.setIcon(Racion.RACION21.getImagen());
+        this.ficha2.setIcon(Racion.RACION22.getImagen());
+        this.ficha3.setIcon(Racion.RACION23.getImagen());
+        this.ficha4.setIcon(Racion.RACION24.getImagen());
+        this.ficha5.setIcon(Racion.RACION25.getImagen());
+        this.ficha6.setIcon(Racion.RACION26.getImagen());
+        this.ficha7.setIcon(Racion.RACION27.getImagen());
+        this.ficha8.setIcon(Racion.RACION28.getImagen());
+        this.ficha9.setIcon(Racion.RACION29.getImagen());
+        this.ficha10.setIcon(Racion.RACION30.getImagen());
+        this.ficha11.setIcon(Racion.RACION31.getImagen());
+        this.ficha12.setIcon(Racion.RACION32.getImagen());
+        this.ficha13.setIcon(Racion.RACION33.getImagen());
+        this.ficha14.setIcon(Racion.RACION34.getImagen());
+        this.ficha15.setIcon(Racion.RACION35.getImagen());
 //        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
@@ -101,23 +99,22 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
         this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
         this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        
-        this.ficha = Racion.RACION21;
-        this.ficha = Racion.RACION22;
-        this.ficha = Racion.RACION23;
-        this.ficha = Racion.RACION24;
-        this.ficha = Racion.RACION25;
-        this.ficha = Racion.RACION26;
-        this.ficha = Racion.RACION27;
-        this.ficha = Racion.RACION28;
-        this.ficha = Racion.RACION29;
-        this.ficha = Racion.RACION30;
-        this.ficha = Racion.RACION31;
-        this.ficha = Racion.RACION32;
-        this.ficha = Racion.RACION33;
-        this.ficha = Racion.RACION34;
-        this.ficha = Racion.RACION35;
-        this.ficha = Racion.RACION36;
+
+        this.ficha1.setIcon(Racion.RACION21.getImagen());
+        this.ficha2.setIcon(Racion.RACION22.getImagen());
+        this.ficha3.setIcon(Racion.RACION23.getImagen());
+        this.ficha4.setIcon(Racion.RACION24.getImagen());
+        this.ficha5.setIcon(Racion.RACION25.getImagen());
+        this.ficha6.setIcon(Racion.RACION26.getImagen());
+        this.ficha7.setIcon(Racion.RACION27.getImagen());
+        this.ficha8.setIcon(Racion.RACION28.getImagen());
+        this.ficha9.setIcon(Racion.RACION29.getImagen());
+        this.ficha10.setIcon(Racion.RACION30.getImagen());
+        this.ficha11.setIcon(Racion.RACION31.getImagen());
+        this.ficha12.setIcon(Racion.RACION32.getImagen());
+        this.ficha13.setIcon(Racion.RACION33.getImagen());
+        this.ficha14.setIcon(Racion.RACION34.getImagen());
+        this.ficha15.setIcon(Racion.RACION35.getImagen());
 //        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
@@ -157,22 +154,21 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
         this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
         this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        this.ficha = Racion.RACION21;
-        this.ficha = Racion.RACION22;
-        this.ficha = Racion.RACION23;
-        this.ficha = Racion.RACION24;
-        this.ficha = Racion.RACION25;
-        this.ficha = Racion.RACION26;
-        this.ficha = Racion.RACION27;
-        this.ficha = Racion.RACION28;
-        this.ficha = Racion.RACION29;
-        this.ficha = Racion.RACION30;
-        this.ficha = Racion.RACION31;
-        this.ficha = Racion.RACION32;
-        this.ficha = Racion.RACION33;
-        this.ficha = Racion.RACION34;
-        this.ficha = Racion.RACION35;
-        this.ficha = Racion.RACION36;
+        this.ficha1.setIcon(Racion.RACION21.getImagen());
+        this.ficha2.setIcon(Racion.RACION22.getImagen());
+        this.ficha3.setIcon(Racion.RACION23.getImagen());
+        this.ficha4.setIcon(Racion.RACION24.getImagen());
+        this.ficha5.setIcon(Racion.RACION25.getImagen());
+        this.ficha6.setIcon(Racion.RACION26.getImagen());
+        this.ficha7.setIcon(Racion.RACION27.getImagen());
+        this.ficha8.setIcon(Racion.RACION28.getImagen());
+        this.ficha9.setIcon(Racion.RACION29.getImagen());
+        this.ficha10.setIcon(Racion.RACION30.getImagen());
+        this.ficha11.setIcon(Racion.RACION31.getImagen());
+        this.ficha12.setIcon(Racion.RACION32.getImagen());
+        this.ficha13.setIcon(Racion.RACION33.getImagen());
+        this.ficha14.setIcon(Racion.RACION34.getImagen());
+        this.ficha15.setIcon(Racion.RACION35.getImagen());
 //        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
 //        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));

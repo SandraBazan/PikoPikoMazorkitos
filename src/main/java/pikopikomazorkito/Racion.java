@@ -12,22 +12,22 @@ package pikopikomazorkito;
 import javax.swing.ImageIcon;
 
 public enum Racion {
-    RACION21(21, 1, new ImageIcon("res/ficha/21blanca.png"), true),
-    RACION22(22, 1, new ImageIcon("res/ficha/22blanca.png"), true),
-    RACION23(23, 1, new ImageIcon("res/ficha/23blanca.png"), true),
-    RACION24(24, 1, new ImageIcon("res/ficha/24blanca.png"), true),
-    RACION25(25, 2, new ImageIcon("res/ficha/25blanca.png"), true),
-    RACION26(26, 2, new ImageIcon("res/ficha/26blanca.png"), true),
-    RACION27(27, 2, new ImageIcon("res/ficha/27blanca.png"), true),
-    RACION28(28, 2, new ImageIcon("res/ficha/28blanca.png"), true),
-    RACION29(29, 3, new ImageIcon("res/ficha/29blanca.png"), true),
-    RACION30(30, 3, new ImageIcon("res/ficha/30blanca.png"), true),
-    RACION31(31, 3, new ImageIcon("res/ficha/31blanca.png"), true),
-    RACION32(32, 3, new ImageIcon("res/ficha/32blanca.png"), true),
-    RACION33(33, 4, new ImageIcon("res/ficha/33blanca.png"), true),
-    RACION34(34, 4, new ImageIcon("res/ficha/34blanca.png"), true),
-    RACION35(35, 4, new ImageIcon("res/ficha/35blanca.png"), true),
-    RACION36(36, 4, new ImageIcon("res/ficha/36blanca.png"), true);
+    RACION21(21, 1, new ImageIcon("res/ficha/21Blanca.png"), true),
+    RACION22(22, 1, new ImageIcon("res/ficha/22Blanca.png"), true),
+    RACION23(23, 1, new ImageIcon("res/ficha/23Blanca.png"), true),
+    RACION24(24, 1, new ImageIcon("res/ficha/24Blanca.png"), true),
+    RACION25(25, 2, new ImageIcon("res/ficha/25Blanca.png"), true),
+    RACION26(26, 2, new ImageIcon("res/ficha/26Blanca.png"), true),
+    RACION27(27, 2, new ImageIcon("res/ficha/27Blanca.png"), true),
+    RACION28(28, 2, new ImageIcon("res/ficha/28Blanca.png"), true),
+    RACION29(29, 3, new ImageIcon("res/ficha/29.png"), true),
+    RACION30(30, 3, new ImageIcon("res/ficha/30.png"), true),
+    RACION31(31, 3, new ImageIcon("res/ficha/31.png"), true),
+    RACION32(32, 3, new ImageIcon("res/ficha/32.png"), true),
+    RACION33(33, 4, new ImageIcon("res/ficha/33.png"), true),
+    RACION34(34, 4, new ImageIcon("res/ficha/34.png"), true),
+    RACION35(35, 4, new ImageIcon("res/ficha/35.png"), true),
+    RACION36(36, 4, new ImageIcon("res/ficha/36.png"), true);
 
     //Atributos de las raciones
     private int numero;
