@@ -6,7 +6,7 @@
 package pikopikomazorkito;
 
 import java.util.Random;
-import javax.swing.ImageIcon;
+import javax.swing.ImageIcon; 
 
 /**
  *
@@ -15,11 +15,11 @@ import javax.swing.ImageIcon;
 public class Dado {
 
     // Vamos a crear el atributo arraysCaras que va a ser un array con las caras de los dados.
-    private CaraDado[] arrayCaras;
+    private CaraDado[] arrayCaras ;
 
     // Vamos a crear el atributo caraSeleccionada que va a tener valores entre 0 y 5.
     // Por defecto tendrá la cara 0
-    private int caraSeleccionada = 0;
+    private int caraSeleccionada;
 
     // Se va a utilizar para saber si los dados no han sido deshabilitado.
     // Por defecto estarán disponible
@@ -27,7 +27,8 @@ public class Dado {
 
     // Constructor por defecto
     public Dado() {
-        CaraDado[] arrayCaras = {CaraDado.CARA1, CaraDado.CARA2, CaraDado.CARA3, CaraDado.CARA4, CaraDado.CARA5, CaraDado.CARA6};
+        arrayCaras = new CaraDado[] {CaraDado.CARA1, CaraDado.CARA2, CaraDado.CARA3, CaraDado.CARA4, CaraDado.CARA5, CaraDado.CARA6};
+        this.caraSeleccionada = 0;
     }
 
     // Método lanzarDado()
@@ -68,14 +69,5 @@ public class Dado {
     @Override
     public String toString() {
         return "Dado{" + "arrayCaras=" + arrayCaras + ", caraSeleccionada=" + caraSeleccionada + ", disponible=" + disponible + '}';
-    }
-
-    public static void main(String[] args) {
-        Dado d = new Dado();
-        for (int i = 0; i < 10; i++) {
-            d.lanzarDado();
-            System.out.println(d.obtenerImagen());
-            System.out.println(d.obtenerPuntuacion());
-        }
     }
 }
