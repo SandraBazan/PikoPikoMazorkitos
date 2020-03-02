@@ -25,27 +25,35 @@ public class VentanaJuego extends javax.swing.JFrame {
     private boolean dado6Seleccionado = false;
     private boolean dado7Seleccionado = false;
     private boolean dado8Seleccionado = false;
-    private TurnoJugador turno;
-    //Atributos de las fichas
-    private Racion ficha;
+    //private TurnoJugador turno;
 
     //Llamar en cada constructor a la ficha con la clase Enum de Racion.
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, Jugador jugador4, ArrayList<Jugador> jugadores) {
         initComponents();
+        //Esto hace que no se redimensione la pantalla
         this.setResizable(false);
+        //Establece del titulo de la ventana
         this.setTitle("Picko Picko Mazorkitos");
+        //Coge el icono del jLabell principal
         this.jLabel11.setIcon(new ImageIcon("res/bgGame.jpg"));
+        //Coge la imagen logo
         this.logo.setIcon(new ImageIcon("res/logo.png"));
+        //Dimensiones de la pantalla
         this.jLabel11.setSize(1250, 700);
+        //Localización de la pantalla
         this.jLabel11.setLocation(-110, 0);
-        this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
-        this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
-        this.dado3.setIcon(new ImageIcon("res/dado/tres.png"));
-        this.dado4.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        this.dado5.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
-        this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        
+        //Mostrar las imagenes de los dados gracias al Enum de CaraDado
+        this.dado1.setIcon(CaraDado.CARA6.getImagen());
+        this.dado2.setIcon(CaraDado.CARA1.getImagen());
+        this.dado3.setIcon(CaraDado.CARA2.getImagen());
+        this.dado4.setIcon(CaraDado.CARA3.getImagen());
+        this.dado5.setIcon(CaraDado.CARA4.getImagen());
+        this.dado6.setIcon(CaraDado.CARA5.getImagen());
+        this.dado7.setIcon(CaraDado.CARA6.getImagen());
+        this.dado8.setIcon(CaraDado.CARA6.getImagen());
+        
+        //Mostrar las imagenes de las raciones gracias al Enum de Racion
         this.ficha1.setIcon(Racion.RACION21.getImagen());
         this.ficha2.setIcon(Racion.RACION22.getImagen());
         this.ficha3.setIcon(Racion.RACION23.getImagen());
@@ -61,47 +69,42 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha13.setIcon(Racion.RACION33.getImagen());
         this.ficha14.setIcon(Racion.RACION34.getImagen());
         this.ficha15.setIcon(Racion.RACION35.getImagen());
-//        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha4.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha5.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha6.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha7.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha8.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha9.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha10.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha11.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha12.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha13.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
-
+        //FALTA AÑADIR LA FICHA 36 A LA VENTANAJUEGO
+        //this.ficha16.setIcon(Racion.RACION36.getImagen());
+        
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
         this.gamePlayer3.setText(jugador3.getNombreJugador());
         this.gamePlayer4.setText(jugador4.getNombreJugador());
-        
-        
+
     }
 
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, Jugador jugador3, ArrayList<Jugador> jugadores) {
         initComponents();
+        //Esto hace que no se redimensione la pantalla
         this.setResizable(false);
+        //Establece del titulo de la ventana
         this.setTitle("Picko Picko Mazorkitos");
+        //Coge el icono del jLabell principal
         this.jLabel11.setIcon(new ImageIcon("res/bgGame.jpg"));
+        //Coge la imagen logo
         this.logo.setIcon(new ImageIcon("res/logo.png"));
+        //Dimensiones de la pantalla
         this.jLabel11.setSize(1250, 700);
+        //Localización de la pantalla
         this.jLabel11.setLocation(-110, 0);
-        this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
-        this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
-        this.dado3.setIcon(new ImageIcon("res/dado/tres.png"));
-        this.dado4.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        this.dado5.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
-        this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
-
+        
+        //Mostrar las imagenes de los dados gracias al Enum de CaraDado
+        this.dado1.setIcon(CaraDado.CARA6.getImagen());
+        this.dado2.setIcon(CaraDado.CARA1.getImagen());
+        this.dado3.setIcon(CaraDado.CARA2.getImagen());
+        this.dado4.setIcon(CaraDado.CARA3.getImagen());
+        this.dado5.setIcon(CaraDado.CARA4.getImagen());
+        this.dado6.setIcon(CaraDado.CARA5.getImagen());
+        this.dado7.setIcon(CaraDado.CARA6.getImagen());
+        this.dado8.setIcon(CaraDado.CARA6.getImagen());
+ 
+        //Mostrar las imagenes de las Raciones gracias al Enum de Racion
         this.ficha1.setIcon(Racion.RACION21.getImagen());
         this.ficha2.setIcon(Racion.RACION22.getImagen());
         this.ficha3.setIcon(Racion.RACION23.getImagen());
@@ -117,21 +120,8 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha13.setIcon(Racion.RACION33.getImagen());
         this.ficha14.setIcon(Racion.RACION34.getImagen());
         this.ficha15.setIcon(Racion.RACION35.getImagen());
-//        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha4.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha5.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha6.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha7.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha8.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha9.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha10.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha11.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha12.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha13.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        //FALTA AÑADIR LA FICHA 36 A LA VENTANAJUEGO
+        //this.ficha16.setIcon(Racion.RACION36.getImagen());
 
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
@@ -142,20 +132,30 @@ public class VentanaJuego extends javax.swing.JFrame {
 
     public VentanaJuego(int numJugadores, Jugador jugador1, Jugador jugador2, ArrayList<Jugador> jugadores) {
         initComponents();
+        //Esto hace que no se redimensione la pantalla
         this.setResizable(false);
+        //Establece del titulo de la ventana
         this.setTitle("Picko Picko Mazorkitos");
+        //Coge el icono del jLabell principal
         this.jLabel11.setIcon(new ImageIcon("res/bgGame.jpg"));
+        //Coge la imagen logo
         this.logo.setIcon(new ImageIcon("res/logo.png"));
+        //Dimensiones de la pantalla
         this.jLabel11.setSize(1250, 700);
+        //Localización de la pantalla
         this.jLabel11.setLocation(-110, 0);
-        this.dado1.setIcon(new ImageIcon("res/dado/uno.png"));
-        this.dado2.setIcon(new ImageIcon("res/dado/dos.png"));
-        this.dado3.setIcon(new ImageIcon("res/dado/tres.png"));
-        this.dado4.setIcon(new ImageIcon("res/dado/cuatro.png"));
-        this.dado5.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado6.setIcon(new ImageIcon("res/dado/mazorca.png"));
-        this.dado7.setIcon(new ImageIcon("res/dado/cinco.png"));
-        this.dado8.setIcon(new ImageIcon("res/dado/cuatro.png"));
+        
+        //Mostrar las imagenes de los dados gracias al Enum de CaraDado
+        this.dado1.setIcon(CaraDado.CARA6.getImagen());
+        this.dado2.setIcon(CaraDado.CARA1.getImagen());
+        this.dado3.setIcon(CaraDado.CARA2.getImagen());
+        this.dado4.setIcon(CaraDado.CARA3.getImagen());
+        this.dado5.setIcon(CaraDado.CARA4.getImagen());
+        this.dado6.setIcon(CaraDado.CARA5.getImagen());
+        this.dado7.setIcon(CaraDado.CARA6.getImagen());
+        this.dado8.setIcon(CaraDado.CARA6.getImagen());
+        
+        //Mostrar las imagenes de las raciones gracias al Enum de las Raciones.
         this.ficha1.setIcon(Racion.RACION21.getImagen());
         this.ficha2.setIcon(Racion.RACION22.getImagen());
         this.ficha3.setIcon(Racion.RACION23.getImagen());
@@ -171,21 +171,8 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha13.setIcon(Racion.RACION33.getImagen());
         this.ficha14.setIcon(Racion.RACION34.getImagen());
         this.ficha15.setIcon(Racion.RACION35.getImagen());
-//        this.ficha1.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha2.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha3.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha4.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha5.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha6.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha7.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha8.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha9.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha10.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha11.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha12.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha13.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha14.setIcon(new ImageIcon("res/ficha/prueba.png"));
-//        this.ficha15.setIcon(new ImageIcon("res/ficha/prueba.png"));
+        //FALTA AÑADIR LA FICHA 36 A LA VENTANAJUEGO
+        //this.ficha16.setIcon(Racion.RACION36.getImagen());
 
         this.gamePlayer1.setText(jugador1.getNombreJugador());
         this.gamePlayer2.setText(jugador2.getNombreJugador());
@@ -429,8 +416,8 @@ public class VentanaJuego extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(gamePlayer2)
+                .addGap(36, 36, 36)
+                .addComponent(gamePlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -438,11 +425,11 @@ public class VentanaJuego extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(gamePlayer2)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(210, 490, 150, 110);
+        jPanel5.setBounds(210, 490, 141, 160);
 
         jPanel4.setBackground(new java.awt.Color(130, 180, 180));
         jPanel4.setToolTipText("");
@@ -454,20 +441,20 @@ public class VentanaJuego extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(41, 41, 41)
                 .addComponent(gamePlayer1)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(gamePlayer1)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(20, 490, 162, 110);
+        jPanel4.setBounds(30, 490, 140, 160);
 
         jPanel6.setBackground(new java.awt.Color(95, 127, 122));
 
@@ -478,20 +465,20 @@ public class VentanaJuego extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(42, 42, 42)
                 .addComponent(gamePlayer3)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(gamePlayer3)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel6);
-        jPanel6.setBounds(390, 490, 150, 110);
+        jPanel6.setBounds(390, 490, 141, 160);
 
         jPanel7.setBackground(new java.awt.Color(252, 247, 94));
 
@@ -502,20 +489,20 @@ public class VentanaJuego extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(42, 42, 42)
                 .addComponent(gamePlayer4)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(gamePlayer4)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(560, 490, 150, 110);
+        jPanel7.setBounds(560, 490, 141, 160);
 
         logo.setText("jLabel1");
         getContentPane().add(logo);
@@ -528,15 +515,15 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(400, 430, 72, 31);
+        jButton3.setBounds(400, 430, 64, 32);
 
         jButton4.setText("Seleccionar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(130, 430, 112, 31);
+        jButton4.setBounds(130, 430, 98, 32);
 
         jButton2.setText("Plantarse");
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 430, 99, 31);
+        jButton2.setBounds(520, 430, 85, 32);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -555,11 +542,11 @@ public class VentanaJuego extends javax.swing.JFrame {
 
         jButton1.setText("Lanzar");
         getContentPane().add(jButton1);
-        jButton1.setBounds(280, 430, 79, 31);
+        jButton1.setBounds(280, 430, 69, 32);
 
         jLabel11.setText("Juego del piko piko");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 0, 134, 15);
+        jLabel11.setBounds(0, 0, 109, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
