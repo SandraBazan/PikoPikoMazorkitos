@@ -131,13 +131,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         //Según el número de jugadores crea una nueva ventana para ver los jugadores en su orden de llegada
         switch (gamers) {
             case 2:
-                new VentanaJuego(2, jugones2.get(0), jugones2.get(1)).setVisible(true);
+                new VentanaJuego(2, jugones2.get(0), jugones2.get(1),jugones2).setVisible(true);
                 break;
             case 3:
-                new VentanaJuego(3, jugones2.get(0), jugones2.get(1), jugones2.get(2)).setVisible(true);
+                new VentanaJuego(3, jugones2.get(0), jugones2.get(1), jugones2.get(2),jugones2).setVisible(true);
                 break;
             case 4:
-                new VentanaJuego(4, jugones2.get(0), jugones2.get(1), jugones2.get(2), jugones2.get(3)).setVisible(true);
+                new VentanaJuego(4, jugones2.get(0), jugones2.get(1), jugones2.get(2), jugones2.get(3),jugones2).setVisible(true);
                 break;
         }
     }//GEN-LAST:event_botonJugarActionPerformed
