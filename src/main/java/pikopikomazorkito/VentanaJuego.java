@@ -28,7 +28,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private TurnoJugador turno;
 
     //Llamar en cada constructor a la ficha con la clase Enum de Racion.
-    public VentanaJuego(ArrayList<Jugador> jugadores) {        
+    public VentanaJuego(ArrayList<Jugador> jugadores) {
         initComponents();
         //Esto hace que no se redimensione la pantalla
         this.setResizable(false);
@@ -42,10 +42,10 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.jLabel11.setSize(1250, 700);
         //Localización de la pantalla
         this.jLabel11.setLocation(-110, 0);
-        
+
         // Añade el ArrayList de los jugador al turno
         this.turno = new TurnoJugador(jugadores);
-        
+
         //Mostrar las imagenes de los dados gracias al Enum de CaraDado
         this.dado1.setIcon(CaraDado.CARA6.getImagen());
         this.dado2.setIcon(CaraDado.CARA1.getImagen());
@@ -55,7 +55,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.dado6.setIcon(CaraDado.CARA5.getImagen());
         this.dado7.setIcon(CaraDado.CARA6.getImagen());
         this.dado8.setIcon(CaraDado.CARA6.getImagen());
-        
+
         //Mostrar las imagenes de las raciones gracias al Enum de Racion
         this.ficha1.setIcon(Racion.RACION21.getImagen());
         this.ficha2.setIcon(Racion.RACION22.getImagen());
@@ -74,20 +74,35 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.ficha15.setIcon(Racion.RACION35.getImagen());
         // FALTA AÑADIR LA FICHA 36 A LA VENTANAJUEGO
         //this.ficha16.setIcon(Racion.RACION36.getImagen());
-        
+
         // MODIFICAR
-        this.gamePlayer1.setText(jugadores.get(0).getNombreJugador());
-        this.gamePlayer2.setText(jugadores.get(1).getNombreJugador());
-        this.gamePlayer3.setText(jugadores.get(2).getNombreJugador());
-        this.gamePlayer4.setText(jugadores.get(3).getNombreJugador());
+        switch (jugadores.size()) {
+            case 2:
+                this.gamePlayer1.setText(jugadores.get(0).getNombreJugador());
+                this.gamePlayer2.setText(jugadores.get(1).getNombreJugador());
+                this.gamePlayer3.setVisible(false);
+                this.gamePlayer4.setVisible(false);
+                break;
+            case 3:
+                this.gamePlayer1.setText(jugadores.get(0).getNombreJugador());
+                this.gamePlayer2.setText(jugadores.get(1).getNombreJugador());
+                this.gamePlayer3.setText(jugadores.get(2).getNombreJugador());
+                this.gamePlayer4.setVisible(false);
+                break;
+            case 4:
+                this.gamePlayer1.setText(jugadores.get(0).getNombreJugador());
+                this.gamePlayer2.setText(jugadores.get(1).getNombreJugador());
+                this.gamePlayer3.setText(jugadores.get(2).getNombreJugador());
+                this.gamePlayer4.setText(jugadores.get(3).getNombreJugador());
+                break;
+        }
 
     }
-    
+
 //    //Creamos un método auxiliar que permite cambiar el icono del dado seleccionado:
 //    private void setValueOnDado(javax.swing.JLabel origen, javax.swing.JLabel destino) {
 //        destino.setIcon(origen.getIcon());
 //    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
