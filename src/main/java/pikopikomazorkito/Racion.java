@@ -12,14 +12,14 @@ package pikopikomazorkito;
 import javax.swing.ImageIcon;
 
 public enum Racion {
-    RACION21(21, 1, new ImageIcon("res/ficha/21Blanca.png"), true),
-    RACION22(22, 1, new ImageIcon("res/ficha/22Blanca.png"), true),
-    RACION23(23, 1, new ImageIcon("res/ficha/23Blanca.png"), true),
-    RACION24(24, 1, new ImageIcon("res/ficha/24Blanca.png"), true),
-    RACION25(25, 2, new ImageIcon("res/ficha/25Blanca.png"), true),
-    RACION26(26, 2, new ImageIcon("res/ficha/26Blanca.png"), true),
-    RACION27(27, 2, new ImageIcon("res/ficha/27Blanca.png"), true),
-    RACION28(28, 2, new ImageIcon("res/ficha/28Blanca.png"), true),
+    RACION21(21, 1, new ImageIcon("res/ficha/21.png"), true),
+    RACION22(22, 1, new ImageIcon("res/ficha/22.png"), true),
+    RACION23(23, 1, new ImageIcon("res/ficha/23.png"), true),
+    RACION24(24, 1, new ImageIcon("res/ficha/24.png"), true),
+    RACION25(25, 2, new ImageIcon("res/ficha/25.png"), true),
+    RACION26(26, 2, new ImageIcon("res/ficha/26.png"), true),
+    RACION27(27, 2, new ImageIcon("res/ficha/27.png"), true),
+    RACION28(28, 2, new ImageIcon("res/ficha/28.png"), true),
     RACION29(29, 3, new ImageIcon("res/ficha/29.png"), true),
     RACION30(30, 3, new ImageIcon("res/ficha/30.png"), true),
     RACION31(31, 3, new ImageIcon("res/ficha/31.png"), true),
