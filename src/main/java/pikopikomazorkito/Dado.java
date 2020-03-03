@@ -54,8 +54,12 @@ public class Dado {
         return arrayCaras;
     }
 
-    public int getCaraSeleccionada() {
-        return caraSeleccionada;
+    public int getNumCaraSeleccionada() {
+        return arrayCaras[this.caraSeleccionada].getNumero();
+    }
+    
+    public CaraDado getCaraSeleccionada() {
+        return arrayCaras[this.caraSeleccionada];
     }
 
     public boolean isDisponible() {

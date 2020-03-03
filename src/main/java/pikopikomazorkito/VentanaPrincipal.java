@@ -108,7 +108,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         int gamers = (int) opcion;
         
         //Creación del Arraylist
-        ArrayList<Jugador> jugones2 = new ArrayList();
+        ArrayList<Jugador> ludopatas = new ArrayList();
         
         //Dado el número de jugadores que vamos a tener
         //Procedemos a preguntar sus nombre
@@ -121,25 +121,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
             } while (texto.isEmpty());
 
-            jugones2.add(new Jugador(texto));
+            ludopatas.add(new Jugador(texto));
         }
         
         //Imprimo por consola todos los jugadores que ha introducido su nombre
-        jugones2.forEach(System.out::println);
+        ludopatas.forEach(System.out::println);
         
-        
-        //Según el número de jugadores crea una nueva ventana para ver los jugadores en su orden de llegada
-        switch (gamers) {
-            case 2:
-                new VentanaJuego(2, jugones2.get(0), jugones2.get(1),jugones2).setVisible(true);
-                break;
-            case 3:
-                new VentanaJuego(3, jugones2.get(0), jugones2.get(1), jugones2.get(2),jugones2).setVisible(true);
-                break;
-            case 4:
-                new VentanaJuego(4, jugones2.get(0), jugones2.get(1), jugones2.get(2), jugones2.get(3),jugones2).setVisible(true);
-                break;
-        }
+        new VentanaJuego(ludopatas).setVisible(true);
     }//GEN-LAST:event_botonJugarActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed

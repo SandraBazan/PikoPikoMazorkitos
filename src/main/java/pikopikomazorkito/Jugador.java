@@ -14,18 +14,14 @@ import java.util.ArrayList;
 public class Jugador {
     //Atributos
     private String nombreJugador;
-    Dado[] dados; //Array de dados 
+    private Dado[] dados; //Array de dados 
     private int puntosAcumulados; //Valor acumulado de los dados seleccionados
-    //ArrayList Fichas susRaciones; (aún no disponible)
-    
-    //Método constructor por defecto
-    public Jugador() {
-    }
+    //ArrayList Fichas susRaciones; (aún no disponible)ichas susRaciones; (a
     
     //Método constructor parametrizado que recibe el nombre del jugador
     public Jugador(String nombreJugador) {
         this.nombreJugador = nombreJugador;
-        this.puntosAcumulados = puntosAcumulados;
+        this.puntosAcumulados = 0; // Se pone por defecto a 0
         //Instancio la lista de Dados de cada Jugador
         //y le asigno un Dado a cada posición
         this.dados = new Dado[8];
