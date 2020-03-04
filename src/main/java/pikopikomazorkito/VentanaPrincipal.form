@@ -38,7 +38,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/Jugar.png"/>
+          <Image iconType="2" name="res/botones/Jugar.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -46,7 +46,7 @@
           </Border>
         </Property>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/JugarR.png"/>
+          <Image iconType="2" name="res/botones/JugarR.png"/>
         </Property>
       </Properties>
       <Events>
@@ -64,7 +64,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/Salir.png"/>
+          <Image iconType="2" name="res/botones/Salir.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -72,7 +72,7 @@
           </Border>
         </Property>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/SalirR.png"/>
+          <Image iconType="2" name="res/botones/SalirR.png"/>
         </Property>
       </Properties>
       <Events>
