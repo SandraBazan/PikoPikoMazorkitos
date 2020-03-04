@@ -67,9 +67,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         botonJugar.setBackground(new java.awt.Color(255, 255, 255));
-        botonJugar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Jugar.png")); // NOI18N
+        botonJugar.setIcon(new javax.swing.ImageIcon("/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/Jugar.png")); // NOI18N
         botonJugar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        botonJugar.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\JugarR.png")); // NOI18N
+        botonJugar.setRolloverIcon(new javax.swing.ImageIcon("/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/JugarR.png")); // NOI18N
         botonJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonJugarActionPerformed(evt);
@@ -79,9 +79,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         botonJugar.setBounds(670, 150, 160, 50);
 
         botonSalir.setBackground(new java.awt.Color(255, 255, 255));
-        botonSalir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\Salir.png")); // NOI18N
+        botonSalir.setIcon(new javax.swing.ImageIcon("/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/Salir.png")); // NOI18N
         botonSalir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        botonSalir.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Now_m\\Documents\\NetBeansProjects\\PikoPikoMazorkitos\\res\\botones\\SalirR.png")); // NOI18N
+        botonSalir.setRolloverIcon(new javax.swing.ImageIcon("/home/naomi/NetBeansProjects/PikoPikoMazorkitos/res/botones/SalirR.png")); // NOI18N
         botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonSalirActionPerformed(evt);
