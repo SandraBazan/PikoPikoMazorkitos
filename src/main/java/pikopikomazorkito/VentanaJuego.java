@@ -155,7 +155,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        lanzar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(739, 700));
@@ -399,7 +399,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel6);
-        jPanel6.setBounds(390, 490, 141, 160);
+        jPanel6.setBounds(390, 490, 150, 160);
 
         jPanel7.setBackground(new java.awt.Color(252, 247, 94));
 
@@ -423,7 +423,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(560, 490, 141, 160);
+        jPanel7.setBounds(560, 490, 150, 160);
 
         logo.setText("jLabel1");
         getContentPane().add(logo);
@@ -436,15 +436,15 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(400, 430, 64, 32);
+        jButton3.setBounds(400, 430, 72, 31);
 
         jButton4.setText("Seleccionar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(130, 430, 98, 32);
+        jButton4.setBounds(130, 430, 112, 31);
 
         jButton2.setText("Plantarse");
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 430, 85, 32);
+        jButton2.setBounds(520, 430, 99, 31);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -461,18 +461,18 @@ public class VentanaJuego extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(130, 350, 490, 60);
 
-        jButton1.setText("Lanzar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        lanzar.setText("Lanzar");
+        lanzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                lanzarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(280, 430, 69, 32);
+        getContentPane().add(lanzar);
+        lanzar.setBounds(280, 430, 79, 31);
 
         jLabel11.setText("Juego del piko piko");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 0, 109, 16);
+        jLabel11.setBounds(0, 0, 134, 15);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -583,7 +583,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         System.out.println("Dado cambiado");
     }//GEN-LAST:event_dado8MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
         // TODO add your handling code here:
         try {
 
@@ -596,21 +596,21 @@ public class VentanaJuego extends javax.swing.JFrame {
            
         turno.getJugadorTurno().tirarDados();
                        
-        this.dado1.setIcon(dado1.getIcon());
-        this.dado2.setIcon(CaraDado.CARA1.getImagen());
-        this.dado3.setIcon(CaraDado.CARA2.getImagen());
-        this.dado4.setIcon(CaraDado.CARA3.getImagen());
-        this.dado5.setIcon(CaraDado.CARA4.getImagen());
-        this.dado6.setIcon(CaraDado.CARA5.getImagen());
-        this.dado7.setIcon(CaraDado.CARA6.getImagen());
-        this.dado8.setIcon(CaraDado.CARA6.getImagen());
+        this.dado1.setIcon(turno.getJugadorTurno().getDados()[0].getCaraSeleccionada().getImagen());
+        this.dado2.setIcon(turno.getJugadorTurno().getDados()[1].getCaraSeleccionada().getImagen());
+        this.dado3.setIcon(turno.getJugadorTurno().getDados()[2].getCaraSeleccionada().getImagen());
+        this.dado4.setIcon(turno.getJugadorTurno().getDados()[3].getCaraSeleccionada().getImagen());
+        this.dado5.setIcon(turno.getJugadorTurno().getDados()[4].getCaraSeleccionada().getImagen());
+        this.dado6.setIcon(turno.getJugadorTurno().getDados()[5].getCaraSeleccionada().getImagen());
+        this.dado7.setIcon(turno.getJugadorTurno().getDados()[6].getCaraSeleccionada().getImagen());
+        this.dado8.setIcon(turno.getJugadorTurno().getDados()[7].getCaraSeleccionada().getImagen());
         
         for (Dado dado : turno.getJugadorTurno().getDados()) {
                 System.out.println(dado.getCaraSeleccionada());
             }
         
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_lanzarActionPerformed
 
     private void cambiarCaras(){
         
@@ -644,7 +644,6 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JLabel gamePlayer2;
     private javax.swing.JLabel gamePlayer3;
     private javax.swing.JLabel gamePlayer4;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -657,6 +656,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton lanzar;
     private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }
