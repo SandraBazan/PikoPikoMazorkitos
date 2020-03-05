@@ -30,6 +30,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private boolean dado7Seleccionado = false;
     private boolean dado8Seleccionado = false;
     private TurnoJugador turno;
+    private Mensajes textarea;
 
     //Llamar en cada constructor a la ficha con la clase Enum de Racion.
     public VentanaJuego(ArrayList<Jugador> jugadores) {
@@ -49,6 +50,10 @@ public class VentanaJuego extends javax.swing.JFrame {
 
         // Añade el ArrayList de los jugador al turno
         this.turno = new TurnoJugador(jugadores);
+        
+        // Añade el JTextArea a textarea
+        this.textarea = new Mensajes(jTextArea);
+        textarea.hola();
 
         //Mostrar las imagenes de los dados gracias al Enum de CaraDado
         this.dado1.setIcon(CaraDado.CARA6.getImagen());
@@ -154,7 +159,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea = new javax.swing.JTextArea();
         lanzar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
@@ -449,17 +454,17 @@ public class VentanaJuego extends javax.swing.JFrame {
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Lato Medium", 0, 12)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Salida del programa");
-        jTextArea1.setRequestFocusEnabled(false);
-        jTextArea1.setVerifyInputWhenFocusTarget(false);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea.setEditable(false);
+        jTextArea.setColumns(20);
+        jTextArea.setFont(new java.awt.Font("Lato Medium", 0, 12)); // NOI18N
+        jTextArea.setRows(5);
+        jTextArea.setText("Salida del programa");
+        jTextArea.setRequestFocusEnabled(false);
+        jTextArea.setVerifyInputWhenFocusTarget(false);
+        jScrollPane1.setViewportView(jTextArea);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(130, 350, 490, 60);
+        jScrollPane1.setBounds(50, 350, 640, 60);
 
         lanzar.setText("Lanzar");
         lanzar.addActionListener(new java.awt.event.ActionListener() {
@@ -605,6 +610,9 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.dado7.setIcon(turno.getJugadorTurno().getDados()[6].getCaraSeleccionada().getImagen());
         this.dado8.setIcon(turno.getJugadorTurno().getDados()[7].getCaraSeleccionada().getImagen());
         
+        // Muestro el mensaje de quién tira y sus dados en el JTextArea.
+        textarea.mensajeTurno(turno);
+        
         for (Dado dado : turno.getJugadorTurno().getDados()) {
                 System.out.println(dado.getCaraSeleccionada());
             }
@@ -655,7 +663,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea;
     private javax.swing.JButton lanzar;
     private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
