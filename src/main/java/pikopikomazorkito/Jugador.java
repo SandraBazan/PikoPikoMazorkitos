@@ -16,11 +16,12 @@ public class Jugador {
     private String nombreJugador;
     private Dado[] dados; //Array de dados 
     private int puntosAcumulados; //Valor acumulado de los dados seleccionados
-    //ArrayList Fichas susRaciones; (aún no disponible)ichas susRaciones; (a
+    private ArrayList<Racion> racionesAcumuladas;
     
     //Método constructor parametrizado que recibe el nombre del jugador
     public Jugador(String nombreJugador) {
         this.nombreJugador = nombreJugador;
+        this.racionesAcumuladas = new ArrayList<>();
         this.puntosAcumulados = 0; // Se pone por defecto a 0
         //Instancio la lista de Dados de cada Jugador
         //y le asigno un Dado a cada posición
@@ -64,7 +65,15 @@ public class Jugador {
     public void setPuntosAcumulados(int puntosAcumulados) {
         this.puntosAcumulados = puntosAcumulados;
     }
-    
+
+    public ArrayList<Racion> getRacionesAcumuladas() {
+        return racionesAcumuladas;
+    }
+
+    public void setRacionesAcumuladas(ArrayList<Racion> racionesAcumuladas) {
+        this.racionesAcumuladas = racionesAcumuladas;
+    }
+
     //Método toString
     @Override
     public String toString() {
