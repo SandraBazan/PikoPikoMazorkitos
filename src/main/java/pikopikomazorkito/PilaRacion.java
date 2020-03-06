@@ -42,7 +42,7 @@ public class PilaRacion {
         return this.racionesAcumuladas.isEmpty();
     }
 
-    //Método que te dice tamaño de la lista de raciones del jugador
+    //Método que te dice cuantas raciones tiene el jugador
     public int tamanioLista() {
         return this.racionesAcumuladas.size();
     }
@@ -53,7 +53,7 @@ public class PilaRacion {
             System.out.println(lista);
         }
     }
-    
+
     //Métodos getters y setters
     public ArrayList<Racion> getRacionesAcumuladas() {
         return racionesAcumuladas;
@@ -61,5 +61,14 @@ public class PilaRacion {
 
     public void setRacionesAcumuladas(ArrayList<Racion> racionesAcumuladas) {
         this.racionesAcumuladas = racionesAcumuladas;
+    }
+
+    //Método que te dice cuantos gusanos tiene acumulado el jugador entre todas las raciones que posee
+    public int gusanosAcumulados(TurnoJugador turno) {
+        int gusanosAcumulados = 0;
+        for (int i = 0; i < racionesAcumuladas.size(); i++) {
+            gusanosAcumulados += turno.getJugadorTurno().getRacionesAcumuladas().get(i).getNumGusanos();
+        }
+        return gusanosAcumulados;
     }
 }
