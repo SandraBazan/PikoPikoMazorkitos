@@ -52,7 +52,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         this.turno = new TurnoJugador(jugadores);
         
         // Añade el JTextArea a textarea
-        this.textarea = new Mensajes(jTextArea);
+        this.textarea = new Mensajes(jTextArea1);
         textarea.hola();
 
         //Mostrar las imagenes de los dados gracias al Enum de CaraDado
@@ -159,7 +159,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea = new javax.swing.JTextArea();
+        jTextArea1 = new javax.swing.JTextArea();
         lanzar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
@@ -404,7 +404,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel6);
-        jPanel6.setBounds(390, 490, 150, 160);
+        jPanel6.setBounds(390, 490, 141, 160);
 
         jPanel7.setBackground(new java.awt.Color(252, 247, 94));
 
@@ -428,7 +428,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(560, 490, 150, 160);
+        jPanel7.setBounds(560, 490, 141, 160);
 
         logo.setText("jLabel1");
         getContentPane().add(logo);
@@ -441,30 +441,30 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(400, 430, 72, 31);
+        jButton3.setBounds(400, 430, 64, 32);
 
         jButton4.setText("Seleccionar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(130, 430, 112, 31);
+        jButton4.setBounds(130, 430, 98, 32);
 
         jButton2.setText("Plantarse");
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 430, 99, 31);
+        jButton2.setBounds(520, 430, 85, 32);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        jTextArea.setEditable(false);
-        jTextArea.setColumns(20);
-        jTextArea.setFont(new java.awt.Font("Lato Medium", 0, 12)); // NOI18N
-        jTextArea.setRows(5);
-        jTextArea.setText("Salida del programa");
-        jTextArea.setRequestFocusEnabled(false);
-        jTextArea.setVerifyInputWhenFocusTarget(false);
-        jScrollPane1.setViewportView(jTextArea);
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Lato Medium", 0, 12)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Salida del programa");
+        jTextArea1.setRequestFocusEnabled(false);
+        jTextArea1.setVerifyInputWhenFocusTarget(false);
+        jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(50, 350, 640, 60);
+        jScrollPane1.setBounds(130, 350, 490, 60);
 
         lanzar.setText("Lanzar");
         lanzar.addActionListener(new java.awt.event.ActionListener() {
@@ -473,11 +473,11 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
         getContentPane().add(lanzar);
-        lanzar.setBounds(280, 430, 79, 31);
+        lanzar.setBounds(280, 430, 69, 32);
 
         jLabel11.setText("Juego del piko piko");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(0, 0, 134, 15);
+        jLabel11.setBounds(0, 0, 109, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -663,7 +663,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton lanzar;
     private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
